@@ -7,6 +7,8 @@ git clone https://github.com/zhenghonglei/zhenghonglei.github.com.git
 
 cd zhenghonglei.github.com
 
+git clone https://github.com/zhenghonglei/hexo-theme-next.git themes/next
+
 npm install
 
 hexo g
