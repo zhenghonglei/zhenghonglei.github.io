@@ -352,8 +352,63 @@
 <p>文件夹目录结构&amp;含义请参考 <a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="external">hexo官方建站说明</a></p>
 <h1 id="配置博客"><a href="#配置博客" class="headerlink" title="配置博客"></a>配置博客</h1><h2 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h2><p>站点配置文件，在&lt;博客存放的文件夹名称&gt;下的 _config.yml 文件中。</p>
 <p>yml文件采用缩进代表层级关系，详细语法请参考阮一峰博客<a href="http://www.ruanyifeng.com/blog/2016/07/yaml.html?f=tt" target="_blank" rel="external">YAML语法</a></p>
+<p>以下配置，请修改配置文件中的原值，不要新增。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">title 网站标题</div><div class="line"></div><div class="line">subtitle	网站副标题</div><div class="line"></div><div class="line">description	网站描述</div><div class="line"></div><div class="line">author	您的名字</div><div class="line"></div><div class="line">url	网址，即用户访问你站点的网址。如果博客在网站的子目录，则该处要加上子目录名字：(http://yoursite.com/child)</div><div class="line"></div><div class="line">root 网站根目录。如果博客在网站的子目录，则该处要加上子目录名字：(/child/)</div><div class="line"></div><div class="line">permalink	文章的 永久链接 格式。用来生成文章地址，建议配成 :year/:title/</div><div class="line"></div><div class="line">new_post_name	新文章的文件名称。建议配置成 :year-:month-:day-:title.md （2017-02-14-title.md）</div><div class="line"></div><div class="line">post_asset_folder 启动 Asset 文件夹，建议配置为true，后面总是需要存放一些图片等资源文件的</div></pre></td></tr></table></figure>
 <h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>推荐使用next，这个主题比较简洁，最主要是使用的人最多，跟大多数人的博客保持风格一致，可以降低别人阅读你博客时的部分困扰。</p>
+<p>next主题的作者，写了很详细的文档来讲述如何使用，很清晰明了，推荐直接阅读<br><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">next官方文档</a></p>
+<h1 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h1><p>在你的博客根文件夹下，执行如下命令：</p>
+<p><code>hexo new 文章名称——可以是中文</code></p>
+<p>hexo会自动在 source/_posts 下生成一篇 <code>文章名称——可以是中文.md</code> 的文档，直接使用你的markdown编辑工具修改这个文档就好了</p>
+<h1 id="生成博客静态站点"><a href="#生成博客静态站点" class="headerlink" title="生成博客静态站点"></a>生成博客静态站点</h1><p>在你的博客根文件夹下，执行如下命令：</p>
+<p><code>hexo g</code></p>
+<p>hexo就会在 public 目录下生成站点的静态文件。 </p>
+<p>把这些文件复制到你站点服务器的目录下就可以正常访问了。</p>
+<p>推荐大家把博客托管到github上面，不需要任何机器和费用，别人就可以浏览我们的博客。</p>
+<p>你也可以通过下面这个命令，在本地预览你的博客：</p>
+<p><code>hexo server</code> 然后通过浏览器访问 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 即可预览</p>
+<h1 id="部署博客到github"><a href="#部署博客到github" class="headerlink" title="部署博客到github"></a>部署博客到github</h1><ol>
+<li><p>首先你要有一个github账号，拿到你在github上的 github-username(username是github用来唯一标识一个用户的，一般在你的profile页面，照片下面第二行就是。 注意是username，不是name)</p>
+</li>
+<li><p>在github创建一个仓库，仓库名字必须是 github-username.github.io (注意替换github-username为你的真实值)</p>
+</li>
+<li><p>修改你的博客根文件夹下的 _config.yml 站点配置文件，找到 deploy 节点配置项，修改如下(<em>注意替换两处github-username为你的真实值</em>)：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">- type:</span> git</div><div class="line"><span class="attr">  repo:</span> https://github.com/github-username/github-username.github.io.git</div><div class="line"><span class="attr">  branch:</span> master</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>安装git部署器 <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="external">hexo-deployer-git</a></p>
+<p><code>npm install hexo-deployer-git --save</code></p>
+</li>
+<li><p>执行如下命令，即把 public 目录下的文件托管到了github上</p>
+<p><code>hexo d</code></p>
+</li>
+<li><p>通过 <a href="https://github-username.github.io/" target="_blank" rel="external">https://github-username.github.io/</a> 就可以访问你的博客咯</p>
+</li>
+</ol>
+<h1 id="托管博客源码到github"><a href="#托管博客源码到github" class="headerlink" title="托管博客源码到github"></a>托管博客源码到github</h1><p>hexo 提供的 hexo-deployer-git 部署器，目前仅支持将public中的静态文件部署到github中。</p>
+<p>但是我们在写博客时，却是需要用到hexo提供的一整套博客框架，即你博客根文件夹下的所有内容。如果这份文件不存在云端，那我们更换电脑时将无法写博客，或者电脑坏了，那我们写的博客找回都比较麻烦。</p>
+<p>目前大家基本都是通过git命令，将博客的整个文件夹上传到github，不过这样做有点麻烦，而且可能会经常忘记去提交。</p>
+<p>因此，仿照官方的git部署器 hexo-deployer-git ，我改造了一个用来部署博客根文件夹的部署器，叫 <a href="https://github.com/zhenghonglei/hexo-basedir-deployer-git" target="_blank" rel="external">hexo-basedir-deployer-git</a></p>
+<ol>
+<li><p>在博客根文件夹下，使用如下指令安装该部署器</p>
+<p><code>npm install hexo-basedir-deployer-git --save</code></p>
+</li>
+<li><p>修改你的博客根文件夹下的 _config.yml 站点配置文件，找到 deploy 节点配置项，追加一个deployer，修改后如下(<em>注意替换四处github-username为你的真实值</em>)：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">- type:</span> git</div><div class="line"><span class="attr">  repo:</span> https://github.com/github-username/github-username.github.io.git</div><div class="line"><span class="attr">  branch:</span> master</div><div class="line"><span class="attr">- type:</span> basedir-git</div><div class="line"><span class="attr">  repo:</span> https://github.com/github-username/github-username.github.io.git</div><div class="line"><span class="attr">  branch:</span> hexo</div><div class="line"><span class="attr">  ignore_pattern:</span> public|node_modules <span class="comment"># public和node_modules就不上传保存了</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这样，你下次执行 hexo d 发布博客时，源码也会被自动保存在你博客的github仓库hexo分支下面，下次你更换电脑后，你只需如下指令就可以开始写博客了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/github-username/github-username.github.io.git</div><div class="line"><span class="built_in">cd</span> github-username.github.io.git</div><div class="line">npm install <span class="comment">#重新安装依赖，因为我上面的配置，没有上传node_modules</span></div></pre></td></tr></table></figure>
+<h1 id="小建议"><a href="#小建议" class="headerlink" title="小建议"></a>小建议</h1><h2 id="主题的升级有时会是个问题"><a href="#主题的升级有时会是个问题" class="headerlink" title="主题的升级有时会是个问题"></a>主题的升级有时会是个问题</h2><p>因为如果你把主题保存在hexo分支中的话，会丢失主题原来的git信息，当你重新clone了git库时，再去升级主题会有些繁琐；</p>
+<p>如果主题不保存，每次都拉新的，那主题的配置文件每次都要单独处理，且最新的主题也可能会跟你之前的配置不兼容，如果每次重新拉了库写博客时，都要去调整这些，也是很崩溃的。</p>
+<p>所以，我的做法是：</p>
+<ol>
+<li>我先fork我使用的主题库</li>
+<li>修改主题配置文件，并push到我fork的库</li>
+<li>每次重新clone了博客库时，也重新clone一下我fork的主题库，这样主题和配置是我之前测试过的，肯定没问题了</li>
+<li>可以把 node模块和主题库的拉取写进一个脚本里，这样可以减少命令的输入</li>
+</ol>
+<h2 id="hexo设置为默认分支"><a href="#hexo设置为默认分支" class="headerlink" title="hexo设置为默认分支"></a>hexo设置为默认分支</h2><p>建议把博客库里面的hexo分支设置为默认分支，在github上project的settings里面设置；这样每次clone库下来时，就不用手工做一下hexo检出了。</p>
 
           
         
