@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>无白</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://zhenghonglei.github.io/"/>
+  <updated>2017-02-06T06:18:25.000Z</updated>
+  <id>http://zhenghonglei.github.io/</id>
+  
+  <author>
+    <name>无白</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo安装及推荐配置</title>
+    <link href="http://zhenghonglei.github.io/2017/hexo%E5%AE%89%E8%A3%85%E5%8F%8A%E6%8E%A8%E8%8D%90%E9%85%8D%E7%BD%AE/"/>
+    <id>http://zhenghonglei.github.io/2017/hexo安装及推荐配置/</id>
+    <published>2017-02-04T02:48:19.000Z</published>
+    <updated>2017-02-06T06:18:25.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;hexo官方网址 &lt;a href=&quot;https://hexo.io/zh-cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://hexo.io/zh-cn/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;hexo官方文档 &lt;a href=&quot;https://hexo
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://zhenghonglei.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac下使用n搭建Node环境</title>
+    <link href="http://zhenghonglei.github.io/2017/mac%E4%B8%8B%E4%BD%BF%E7%94%A8n%E6%90%AD%E5%BB%BANode%E7%8E%AF%E5%A2%83/"/>
+    <id>http://zhenghonglei.github.io/2017/mac下使用n搭建Node环境/</id>
+    <published>2017-02-03T05:39:45.000Z</published>
+    <updated>2017-02-06T02:45:16.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;n是什么&quot;&gt;&lt;a href=&quot;#n是什么&quot; class=&quot;headerlink&quot; title=&quot;n是什么&quot;&gt;&lt;/a&gt;n是什么&lt;/h1&gt;&lt;p&gt;n是一个node版本管理程序，可以用来安装多个版本的node环境，并可以随时切换node的版本。n是tj大神开发的一款应用，
+    
+    </summary>
+    
+    
+      <category term="nodejs" scheme="http://zhenghonglei.github.io/tags/nodejs/"/>
+    
+      <category term="n" scheme="http://zhenghonglei.github.io/tags/n/"/>
+    
+  </entry>
+  
+</feed>
