@@ -74,7 +74,7 @@ deploy:
 - type: basedir-git
   repo: https://github.com/zhenghonglei/zhenghonglei.github.io.git
   branch: hexo
-  ignore_pattern: public|node_modules
+  ignore_pattern: public|node_modules|themes
 
 # 百度统计
 baidu_analytics: c78770112028dcecb921d7f0b863cd7b
