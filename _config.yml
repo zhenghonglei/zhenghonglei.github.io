@@ -79,12 +79,6 @@ deploy:
 # 百度统计
 baidu_analytics: c78770112028dcecb921d7f0b863cd7b
 
-# 友盟统计
-cnzz_siteid: 1261202014
-
-# JiaThis 分享服务
-jiathis: true
-
 # use for RSS
 feed:
   type: atom
