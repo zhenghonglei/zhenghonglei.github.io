@@ -79,6 +79,7 @@ deploy:
 # 百度统计
 baidu_analytics: c78770112028dcecb921d7f0b863cd7b
 
+# use for RSS
 feed:
   type: atom
   path: atom.xml
@@ -86,23 +87,4 @@ feed:
   hub:
   content:
 
-# JsonContent config
-#jsonContent:
-#  meta: false
-#  pages: false
-#  posts:
-#    title: true
-#    date: true
-#    path: true
-#    text: true
-#    raw: false
-#    content: false
-#    slug: false
-#    updated: false
-#    comments: false
-#    link: false
-#    permalink: false
-#    excerpt: false
-#    categories: false
-#    tags: true
 
