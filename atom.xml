@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhenghonglei.github.io/"/>
-  <updated>2017-02-07T02:03:05.000Z</updated>
+  <updated>2017-03-14T12:51:06.000Z</updated>
   <id>http://zhenghonglei.github.io/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>svn代码迁移到git</title>
+    <link href="http://zhenghonglei.github.io/2017/svn%E4%BB%A3%E7%A0%81%E8%BF%81%E7%A7%BB%E5%88%B0git/"/>
+    <id>http://zhenghonglei.github.io/2017/svn代码迁移到git/</id>
+    <published>2017-03-14T11:38:54.000Z</published>
+    <updated>2017-03-14T12:51:06.000Z</updated>
+    
+    <summary type="html">
+    
+      svn代码迁移到git上的几种通用做法
+    
+    </summary>
+    
+    
+      <category term="svn" scheme="http://zhenghonglei.github.io/tags/svn/"/>
+    
+      <category term="代码迁移" scheme="http://zhenghonglei.github.io/tags/%E4%BB%A3%E7%A0%81%E8%BF%81%E7%A7%BB/"/>
+    
+      <category term="git" scheme="http://zhenghonglei.github.io/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo安装及推荐配置</title>
